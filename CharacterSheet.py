@@ -20,44 +20,32 @@ class Character:
     RACEOPTIONS = ['Human', 'Dwarf', 'Elf', 'Dragonborn', 'Tiefling', 'Half-Elf']
 
     RACEDESCRIPTOR = {0 : """
-
 +1 Extra Feat, +2 to any attribute, or +1 to any choice of 2 attribute
 Bipedal. 
 Medium Humanoids. 
-
     """,
                       1 : """
-
 +2 , +1 Extra Augment, +1 to any attribute or +1 Extra Feat/Skill.
 Bipedal.
 Small Humanoids. 
-
                       """,
                       2 : """
-
 +2 Constitution[placeholder],+2 Skills , and +1 Extra Feat/Skill or +1 to any attribute
 Bipedal.
 Tall Humanoids.
-
                       """,
                       3 : """
-
 +2 Strength[placeholder], +1 to any attribute, and +1 to A/C[placeholder]
 Bipedal Dragon-Folk
                       """,
                       4 : """
-
 +2 Intelligence[placeholder], +2 to any attribute, +1 Skills, or +1 Extra Feat
 Bipedal(Generally).
 Medium Humanoids.
-
-
                       """,
                       5 : """
-
 +1 Wisdom, +1 to anyattribute, and +1 Extra Feat
 Bipedal Half-Humanoid.
-
                       """}
 
 
