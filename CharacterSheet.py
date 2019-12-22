@@ -1,20 +1,39 @@
 import time
+from datetime import date
+
+def calculateAge(birthDate): 
+    today = date.today() 
+    age = today.year - birthDate.year - ((today.month, today.day) <  (birthDate.month, birthDate.day)) 
+    return age 
+
 
 class Character:
 
-    def charName(self):
-        name = input('What is your name Traveller? ')
-        charname = name
-        print(f'Hello {charname}! Welcome to Fantasy World 3000!')
-        time.sleep(1)
+    def __init__(self, name="", age=0):
+        """
+        Initialize a character object and prompt the user for the name, age and race.
+        """
+        self.charName()
+        print(f'Hello {self.name}! Welcome to Fantasy World 3000!')
+        self.charAge()
+        print(f'Your Birthday: {self.age}\n(The year has been modified to match the setting of the game)')
 
+
+    def charName(self):
+        """
+        This method prompts the user for the name, modifies the character object and assigns the given value to the property 'name'
+        """
+        self.name = input('What is your name Traveller? ')
+        time.sleep(1)
+    
     def charAge(self):
-        print('Let\'s determine your birthday.')
-        month = input('Month: ')
+        print('Let\'s determine your age.')
+        month = int(input('Month: '))
         day = int(input('Day: '))
-        year = int(input('Year: ')) + int(1050)
-        print(f'Your Birthday: {month}/{day}/{year}\n(The year has been modified to match the setting of the game)')
-        birth = f'Your Birthday: {month}/{day}/{year}\n'
+        year = int(input('Year: '))
+        self.age = calculateAge(date(year, month, day))
+        
+        # birth = f'Your Birthday: {month}/{day}/{year}\n'
         time.sleep(1)
 
     RACEOPTIONS = ['Human', 'Dwarf', 'Elf', 'Dragonborn', 'Tiefling', 'Half-Elf']
@@ -108,6 +127,8 @@ Bipedal Half-Humanoid.
 
 #testing to see if it works
 
-Character.charName(Character)
-Character.charAge(Character)
-Character.chooseRace(Character)
+# Character.charName(Character)
+# Character.charAge(Character)
+# Character.chooseRace(Character)
+if __name__ == "__main__":
+    p1 = Character()
